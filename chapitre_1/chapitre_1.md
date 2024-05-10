@@ -19,3 +19,6 @@ int main()
 ci-dessus, `std::cout` pour **character output** et l'operateur `<<` permet d'afficher des informations sur la console.
 
 `return` statement : indique que le programme c'est exécuté de façon correcte. Il retourne 0 à notre système d'exploitation, qui signifie "Tout c'est bien passé !".
+
+Ceci est un test
+
