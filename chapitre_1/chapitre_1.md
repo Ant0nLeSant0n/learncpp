@@ -97,8 +97,36 @@ L'enchainement des **`<<`** permet de concatainer du text.
 
 ```c++
 std::cout << "Hi!" << std::endl; // std::endl will cause the cursor to move to the next line
-```S
-**`std::endl`** est utilisé afin de sauter une ligne.
+```
+**`std::endl`** est utilisé afin de sauter une ligne. Il vide le buffer, c'est pourquoi nous préferons utiliser **`\n`** pour sauter une ligne.
+
+```c++
+std::cout << "x is equal to: " << x << '\n'
+std::cout << "And that's all, folks!\n";
+```
 
 >**Best Practice**
 > Output a newline whenever a line of output is complete.
+> Utiliser **\n** pour sauter une ligne.
+
+Utilisation de **`std::cin`** :
+
+```c++
+std::cout << "Enter two numbers separated by a space: ";
+
+int x{}; // define variable x to hold user input (and value-initialize it)
+int y{}; // define variable y to hold user input (and value-initialize it)
+std::cin >> x >> y; // get two numbers and store in variable x and y respectively
+
+std::cout << "You entered " << x << " and " << y << '\n';
+```
+>**Best Practice**
+> Toujours commencer par initialiser la variable.
+>
+> 
+
+ #### 1.6 - Uninitialized variables and undefined behavior
+
+ * Initialized = The object is given a known value at the point of definition.
+ * Assignment = The object is given a known value beyond the point of definition.
+ * Uninitialized = The object has not been given a known value yet.
